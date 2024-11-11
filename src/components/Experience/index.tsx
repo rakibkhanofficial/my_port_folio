@@ -26,9 +26,9 @@ const experiences: Experience[] = [
     id: "1",
     type: "work",
     title: "Software Developer",
-    company: "Tech Company",
-    location: "Remote",
-    duration: "2022 - Present",
+    company: "Akij Venture",
+    location: "Gulshan, Dhaka, Bangladesh",
+    duration: "2023 - Present",
     description: [
       "Developed and maintained multiple full-stack web applications",
       "Collaborated with cross-functional teams to deliver high-quality solutions",
@@ -40,9 +40,9 @@ const experiences: Experience[] = [
     id: "2",
     type: "work",
     title: "Software Development Intern",
-    company: "Startup Inc.",
-    location: "Bangalore, India",
-    duration: "2021 - 2022",
+    company: "Akij Venture.",
+    location: "Gulshan, Dhaka, Bangladesh",
+    duration: "2023 - 2023",
     description: [
       "Assisted in developing new features for the main product",
       "Participated in code reviews and technical discussions",
@@ -56,9 +56,9 @@ const experiences: Experience[] = [
     title: "Bachelor of Technology in Computer Science",
     institution: "Lovely Professional University",
     location: "Punjab, India",
-    duration: "2018 - 2022",
+    duration: "2017 - 2022",
     description: [
-      "CGPA: 8.5/10",
+      "CGPA: 6.5/10",
       "Specialized in Full Stack Development and Cloud Computing",
       "Led technical team in university hackathons",
     ],
@@ -113,7 +113,7 @@ const TimelineItem: React.FC<{ experience: Experience; index: number }> = ({
   };
 
   return (
-    <div ref={ref} className="mb-12 md:mb-16">
+    <div ref={ref} className="mb-12 md:mb-16 z-[-50]">
       <div
         className={`flex flex-col items-center md:flex-row ${
           index % 2 === 0 ? "md:flex-row-reverse" : ""

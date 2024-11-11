@@ -33,8 +33,8 @@ interface CalendarProps {
 }
 
 const AnimatedGitHubCalendar: React.FC<CalendarProps> = ({
-  username,
-  githubToken,
+  username="rakibkhanofficial",
+  githubToken="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",
 }) => {
   const currentYear = new Date().getFullYear();
   const [selectedYear, setSelectedYear] = useState<number>(currentYear);
@@ -198,7 +198,7 @@ const AnimatedGitHubCalendar: React.FC<CalendarProps> = ({
             </select>
           </div>
 
-          <div className="overflow-x-auto rounded-lg bg-white/50 p-6 shadow-lg dark:bg-gray-800/50">
+          <div className="overflow-x-auto z-[-150] rounded-lg bg-white/50 p-6 shadow-lg dark:bg-gray-800/50">
             <div className="relative">
               {/* Month labels */}
               <div className="mb-2 flex">

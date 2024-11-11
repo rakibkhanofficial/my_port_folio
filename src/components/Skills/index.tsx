@@ -113,7 +113,7 @@ const SkillsSection = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-8 z-40 lg:grid-cols-2">
           {Object.entries(skillsData).map(([category, skills]) => (
             <motion.div
               key={category}

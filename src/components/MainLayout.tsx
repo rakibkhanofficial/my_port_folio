@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import ScrollToTop from "~/Elements/ScrollToTop";
 import FloatingChatBot from "~/Elements/CustomMessenger";
 import AnimatedGitHubCalendar from "./GithubCalender";
+import BottomNav from "~/Elements/BottomNavigation";
 
 const MainLayout = () => {
   const faqs = [
@@ -20,12 +21,15 @@ const MainLayout = () => {
   ];
 
   return (
-    <main>
-      <div className="sticky h-16 w-full">
+    <div>
+      <div className="fixed h-16 w-full">
         <NavbarComponent />
       </div>
       <HeroSection />
-      <AnimatedGitHubCalendar githubToken="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" username="rakibkhanofficial"/>
+      <AnimatedGitHubCalendar
+        githubToken="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"
+        username="rakibkhanofficial"
+      />
       <SkillsSection />
       <ProjectsSection />
       <ExperienceSection />
@@ -33,6 +37,7 @@ const MainLayout = () => {
       <footer>
         <FooterComponent />
       </footer>
+      <BottomNav />
       <ScrollToTop />
       <FloatingChatBot
         messengerUrl="http://m.me/rakibkhan"
@@ -44,7 +49,7 @@ const MainLayout = () => {
         activeHours={{ start: 8, end: 22 }}
         faqs={faqs}
       />
-    </main>
+    </div>
   );
 };
 

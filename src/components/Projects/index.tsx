@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiFolder, FiStar } from 'react-icons/fi';
+import React from "react";
+import { motion } from "framer-motion";
+import { FiGithub, FiExternalLink, FiFolder, FiStar } from "react-icons/fi";
 import {
   SiTypescript,
   SiReact,
@@ -8,13 +8,23 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiMongodb,
-} from 'react-icons/si';
-import type { IconType } from 'react-icons';
-import { Image } from '@nextui-org/react';
-import Link from 'next/link';
+  SiMysql,
+  SiNestjs,
+} from "react-icons/si";
+import type { IconType } from "react-icons";
+import { Image } from "@nextui-org/react";
+import Link from "next/link";
 
 // Type definitions
-type TechName = 'React' | 'Next.js' | 'TypeScript' | 'Tailwind' | 'Node.js' | 'MongoDB';
+type TechName =
+  | "React"
+  | "Next.js"
+  | "TypeScript"
+  | "Tailwind"
+  | "Node.js"
+  | "MongoDB"
+  | "MySQL"
+  | "NestJS";
 
 interface ProjectStats {
   stars: number;
@@ -45,54 +55,165 @@ interface TechIconProps {
 // Sample data
 const projectsData: Project[] = [
   {
-    id: '1',
-    title: 'E-Commerce Dashboard',
-    description: 'A comprehensive dashboard for managing online stores with real-time analytics, inventory management, and sales tracking features.',
-    tags: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://example.com',
+    id: "1",
+    title: "Akij Fair Value E-Commerce",
+    description:
+      "An e-commerce platform for Akij Fair Value, featuring a robust management dashboard with real-time analytics, inventory control, and sales tracking. It supports scalable business operations and provides a seamless shopping experience for users.",
+    tags: ["React", "TypeScript", "Node.js", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.akijfairvalue.com",
     stats: {
       stars: 128,
       forks: 45,
     },
-    image: '/api/placeholder/600/400',
+    image: "/projects/Akij-Fair-Value.png",
     tech: {
-      frontend: ['React', 'TypeScript', 'Tailwind'],
-      backend: ['Node.js', 'MongoDB'],
+      frontend: ["React", "Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MongoDB"],
     },
   },
   {
-    id: '2',
-    title: 'AI Content Generator',
-    description: 'An AI-powered platform that generates high-quality content for blogs, social media, and marketing materials using advanced NLP.',
-    tags: ['Next.js', 'OpenAI', 'Node.js', 'MongoDB'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://example.com',
+    id: "2",
+    title: "HRIS Management",
+    description:
+      "An HRIS (Human Resource Information System) platform equipped with AI-powered tools for generating high-quality HR-related content. This application leverages NLP to streamline HR workflows, manage employee data, and support decision-making processes.",
+    tags: ["Next.js", "OpenAI", "Node.js", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://hris.neoscoder.com",
     stats: {
       stars: 245,
       forks: 89,
     },
-    image: '/api/placeholder/600/400',
+    image: "/projects/hris-.png",
     tech: {
-      frontend: ['Next.js', 'TypeScript', 'Tailwind'],
-      backend: ['Node.js', 'MongoDB'],
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
     },
   },
   {
-    id: '3',
-    title: 'Real-time Collaboration Tool',
-    description: 'A collaborative workspace platform with real-time document editing, video conferencing, and team management features.',
-    tags: ['React', 'WebRTC', 'Socket.io', 'MongoDB'],
-    githubLink: 'https://github.com',
-    liveLink: 'https://example.com',
+    id: "3",
+    title: "Beach Limo Car Rental",
+    description:
+      "An intuitive car rental service platform for Beach Limo, offering real-time availability, booking management, and a streamlined rental process. Supports real-time communications for booking updates and user notifications.",
+    tags: ["React", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.beachlimofl.com",
     stats: {
       stars: 189,
       forks: 67,
     },
-    image: '/api/placeholder/600/400',
+    image: "/projects/Beach-Limo-Limo.png",
     tech: {
-      frontend: ['React', 'TypeScript', 'Tailwind'],
-      backend: ['Node.js', 'MongoDB'],
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
+    },
+  },
+  {
+    id: "4",
+    title: "Warranty Wizard",
+    description:
+      "An innovative platform for managing product warranties, enabling users to register, track, and claim warranties for various products seamlessly. Features document uploads, warranty status checks, and real-time support.",
+    tags: ["React", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.warrantywizard.com",
+    stats: {
+      stars: 189,
+      forks: 67,
+    },
+    image: "/projects/warrantywizard.png",
+    tech: {
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
+    },
+  },
+  {
+    id: "5",
+    title: "Akij Venture Ltd",
+    description:
+      "A portfolio website for Akij Venture Ltd., presenting the company's mission, services, and products through a modern, responsive design and user-friendly interface.",
+    tags: ["React", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.akijventure.com",
+    stats: {
+      stars: 189,
+      forks: 67,
+    },
+    image: "/projects/Akij-Venture.png",
+    tech: {
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
+    },
+  },
+  {
+    id: "6",
+    title: "Akij Food and Beverage Ltd",
+    description:
+      "A corporate website for Akij Food and Beverage Ltd., showcasing the company's product lines, news, and brand story. Designed for a rich user experience and optimized for easy navigation.",
+    tags: ["React", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.akijfood.com",
+    stats: {
+      stars: 189,
+      forks: 67,
+    },
+    image: "/projects/AKij-Food-Beverage.png",
+    tech: {
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
+    },
+  },
+  {
+    id: "7",
+    title: "Akij Bicycle & Engineering Ltd",
+    description:
+      "The official website for Akij Bicycle & Engineering Ltd., featuring detailed information on the company's offerings, services, and product specifications, tailored to enhance customer engagement.",
+    tags: ["Next.js", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.akijbicycle.com",
+    stats: {
+      stars: 189,
+      forks: 67,
+    },
+    image: "/projects/Akij-Bicycle-Engineering-Ltd.png",
+    tech: {
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
+    },
+  },
+  {
+    id: "8",
+    title: "Amanatul Monowara Prokashoni",
+    description:
+      "A publishing house website for Amanatul Monowara Prokashoni, highlighting the company’s book collections, author profiles, and news related to upcoming publications.",
+    tags: ["Next.js", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.ampublication.com",
+    stats: {
+      stars: 189,
+      forks: 67,
+    },
+    image: "/projects/Akij-Monowara-Prokashoni.png",
+    tech: {
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
+    },
+  },
+  {
+    id: "9",
+    title: "Acme Ecommerce",
+    description:
+      "A full-featured e-commerce platform for Acme, built to handle high traffic and complex inventories. This application offers seamless user interactions, fast loading times, and a secure checkout process.",
+    tags: ["Next.js", "WebRTC", "Socket.io", "MongoDB"],
+    githubLink: "https://github.com",
+    liveLink: "https://www.e-acme.com",
+    stats: {
+      stars: 189,
+      forks: 67,
+    },
+    image: "/projects/AcmeEcommerce.png",
+    tech: {
+      frontend: ["Next.js", "TypeScript", "Tailwind"],
+      backend: ["Node.js", "MySQL", "NestJS"],
     },
   },
 ];
@@ -101,11 +222,13 @@ const projectsData: Project[] = [
 const TechIcon: React.FC<TechIconProps> = ({ name }) => {
   const icons: Record<TechName, IconType> = {
     React: SiReact,
-    'Next.js': SiNextdotjs,
+    "Next.js": SiNextdotjs,
     TypeScript: SiTypescript,
     Tailwind: SiTailwindcss,
-    'Node.js': SiNodedotjs,
+    "Node.js": SiNodedotjs,
     MongoDB: SiMongodb,
+    MySQL: SiMysql,
+    NestJS: SiNestjs,
   };
 
   const Icon = icons[name];
@@ -143,7 +266,7 @@ const ProjectsSection: React.FC = () => {
                   alt={project.title}
                   className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                
+
                 {/* Links Overlay */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/50 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <Link
@@ -172,22 +295,24 @@ const ProjectsSection: React.FC = () => {
                 <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-600 dark:text-gray-400">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.frontend.concat(project.tech.backend).map((tech, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-1.5 rounded-full bg-gray-100/80 px-3 py-1.5 text-sm font-medium text-gray-700 backdrop-blur-sm dark:bg-gray-700/80 dark:text-gray-300"
-                    >
-                      <TechIcon name={tech} />
-                      <span>{tech}</span>
-                    </div>
-                  ))}
+                  {project.tech.frontend
+                    .concat(project.tech.backend)
+                    .map((tech, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-1.5 rounded-full bg-gray-100/80 px-3 py-1.5 text-sm font-medium text-gray-700 backdrop-blur-sm dark:bg-gray-700/80 dark:text-gray-300"
+                      >
+                        <TechIcon name={tech} />
+                        <span>{tech}</span>
+                      </div>
+                    ))}
                 </div>
 
                 {/* Project Stats */}

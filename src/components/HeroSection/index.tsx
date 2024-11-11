@@ -46,8 +46,16 @@ const HeroSection = () => {
     duration: Math.random() * 2 + 2,
   }));
 
+  const handleDownload = () => {
+    // Trigger download for the CV file located in the public folder
+    const link = document.createElement("a");
+    link.href = "/resume/Abul_Bashar_Khan_Rakib.pdf"; // Adjust the path if your CV file has a different name or folder
+    link.download = "Abul_Bashar_Khan_Rakib.pdf"; // This sets the download file name
+    link.click();
+  };
+
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900 overflow-hidden">
+    <div className="relative min-h-screen z-[-50] overflow-hidden bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
       {/* Animated background circles */}
       {circles.map((circle, index) => (
         <motion.div
@@ -76,30 +84,27 @@ const HeroSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16"
+        className="container mx-auto px-4 pb-16 pt-24 sm:px-6 lg:px-8"
       >
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
           {/* Left content */}
           <div className="flex-1 space-y-8">
             <motion.div variants={itemVariants} className="space-y-2">
               <div className="inline-block">
                 <motion.span
-                  className="inline-block px-4 py-2 rounded-full text-sm bg-blue-100 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20"
+                  className="inline-block rounded-full border border-blue-200 bg-blue-100 px-4 py-2 text-sm text-blue-600 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-400"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   👋 Welcome to my portfolio
                 </motion.span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
-                <motion.span
-                  className="block"
-                  variants={itemVariants}
-                >
+              <h1 className="text-4xl font-bold text-gray-900 dark:text-white md:text-6xl">
+                <motion.span className="block" variants={itemVariants}>
                   {"Hi, I'm Rakib Khan"}
                 </motion.span>
                 <motion.span
-                  className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-500 bg-clip-text text-transparent"
+                  className="mt-2 block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-500"
                   variants={itemVariants}
                 >
                   Full Stack Developer
@@ -107,10 +112,10 @@ const HeroSection = () => {
               </h1>
               <motion.p
                 variants={itemVariants}
-                className="text-lg text-gray-600 dark:text-gray-400 max-w-xl mt-4"
+                className="mt-4 max-w-xl text-lg text-gray-600 dark:text-gray-400"
               >
-                I craft elegant solutions through code, specializing in building exceptional 
-                digital experiences that live on the internet.
+                I craft elegant solutions through code, specializing in building
+                exceptional digital experiences that live on the internet.
               </motion.p>
             </motion.div>
 
@@ -122,29 +127,30 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 rounded-lg bg-blue-600 text-white flex items-center gap-2 hover:bg-blue-700 transition-colors"
+                className="flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
+                onClick={handleDownload}
               >
-                <HiDownload className="w-5 h-5" />
+                <HiDownload className="h-5 w-5" />
                 Download CV
               </motion.button>
               <motion.div className="flex gap-4">
                 <motion.a
-                  href="https://github.com"
+                  href="https://github.com/rakibkhanofficial/"
                   target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                 >
-                  <FaGithub className="w-5 h-5" />
+                  <FaGithub className="h-5 w-5" />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/rakibkhanofficial/"
                   target="_blank"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  className="rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                 >
-                  <FaLinkedinIn className="w-5 h-5" />
+                  <FaLinkedinIn className="h-5 w-5" />
                 </motion.a>
               </motion.div>
             </motion.div>
@@ -152,21 +158,25 @@ const HeroSection = () => {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8"
+              className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4"
             >
               {[
-                { label: "Years Experience", value: "5+" },
-                { label: "Projects Completed", value: "100+" },
+                { label: "Years Experience", value: "2+" },
+                { label: "Projects Completed", value: "10+" },
                 { label: "Technologies", value: "20+" },
                 { label: "Client Satisfaction", value: "100%" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="p-4 rounded-lg bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700/50"
+                  className="rounded-lg border border-gray-200 bg-white/50 p-4 backdrop-blur-sm dark:border-gray-700/50 dark:bg-gray-800/50"
                 >
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">{stat.value}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                    {stat.label}
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -175,26 +185,26 @@ const HeroSection = () => {
           {/* Right content - Profile Image */}
           <motion.div
             variants={itemVariants}
-            className="relative flex-1 max-w-md"
+            className="relative max-w-md flex-1"
             animate={floatingAnimation}
           >
             <div className="relative">
               {/* Gradient circle behind image */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-full blur-3xl" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/10 to-purple-500/10 blur-3xl dark:from-blue-500/20 dark:to-purple-500/20" />
               {/* Profile image placeholder */}
               <motion.div
-                className="relative aspect-square rounded-full overflow-hidden border-2 border-blue-200 dark:border-blue-500/20 bg-gray-100/50 dark:bg-gray-800/50"
+                className="relative aspect-square overflow-hidden rounded-full border-2 border-blue-200 bg-gray-100/50 dark:border-blue-500/20 dark:bg-gray-800/50"
                 whileHover={{ scale: 1.02 }}
               >
                 <Image
                   src="/heroimage/hero.jpeg"
                   alt="John Doe"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </motion.div>
               {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/5 dark:bg-blue-500/10 rounded-full blur-xl" />
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-500/5 dark:bg-purple-500/10 rounded-full blur-xl" />
+              <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-blue-500/5 blur-xl dark:bg-blue-500/10" />
+              <div className="absolute -bottom-4 -left-4 h-32 w-32 rounded-full bg-purple-500/5 blur-xl dark:bg-purple-500/10" />
             </div>
           </motion.div>
         </div>
@@ -203,9 +213,9 @@ const HeroSection = () => {
       {/* Tech stack marquee */}
       <motion.div
         variants={itemVariants}
-        className="absolute bottom-0 left-0 right-0 py-4 bg-gradient-to-r from-gray-50/0 via-gray-50/80 to-gray-50/0 dark:from-gray-900/0 dark:via-gray-900/80 dark:to-gray-900/0"
+        className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-50/0 via-gray-50/80 to-gray-50/0 py-4 dark:from-gray-900/0 dark:via-gray-900/80 dark:to-gray-900/0"
       >
-        <div className="flex justify-center items-center gap-8 text-gray-500 dark:text-gray-400">
+        <div className="flex items-center justify-center gap-8 text-gray-500 dark:text-gray-400">
           <motion.span
             animate={{ x: [-1000, 1000] }}
             transition={{
@@ -215,7 +225,8 @@ const HeroSection = () => {
             }}
             className="whitespace-nowrap"
           >
-            React • Next.js • TypeScript • Node.js • TailwindCSS • MongoDB • GraphQL • AWS • Docker • Git
+            React • Next.js • TypeScript • Node.js • TailwindCSS • MongoDB •
+            GraphQL • AWS • Docker • Git
           </motion.span>
         </div>
       </motion.div>

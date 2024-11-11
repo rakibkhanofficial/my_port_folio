@@ -107,8 +107,8 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: <FiGithub className="h-6 w-6" />, href: '#', label: 'GitHub' },
-    { icon: <FiLinkedin className="h-6 w-6" />, href: '#', label: 'LinkedIn' },
+    { icon: <FiGithub className="h-6 w-6" />, href: 'https://github.com/rakibkhanofficial', label: 'GitHub' },
+    { icon: <FiLinkedin className="h-6 w-6" />, href: 'https://www.linkedin.com/in/rakibkhanofficial/', label: 'LinkedIn' },
     { icon: <FiTwitter className="h-6 w-6" />, href: '#', label: 'Twitter' }
   ];
 

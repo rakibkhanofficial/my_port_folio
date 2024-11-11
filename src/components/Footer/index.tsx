@@ -19,7 +19,7 @@ const FooterComponent = () => {
   const socialLinks: SocialLink[] = [
     {
       icon: <FaGithub className="w-5 h-5" />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/rakibkhanofficial",
       label: "GitHub"
     },
     {
@@ -29,12 +29,12 @@ const FooterComponent = () => {
     },
     {
       icon: <FaLinkedinIn className="w-5 h-5" />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://linkedin.com/in/rakibkhanofficial/",
       label: "LinkedIn"
     },
     {
       icon: <HiMail className="w-5 h-5" />,
-      href: "mailto:your@email.com",
+      href: "mailto:khanrakib218@gmail.com",
       label: "Email"
     }
   ];
@@ -64,7 +64,7 @@ const FooterComponent = () => {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
             >
-              John Doe
+              Rakib Khan
             </motion.h2>
             <p className="text-gray-600 dark:text-gray-300">
               Full Stack Developer passionate about creating beautiful and functional web applications.
@@ -96,9 +96,9 @@ const FooterComponent = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600 dark:text-gray-300">San Francisco, CA</li>
-              <li className="text-gray-600 dark:text-gray-300">+1 (555) 123-4567</li>
-              <li className="text-gray-600 dark:text-gray-300">contact@johndoe.dev</li>
+              <li className="text-gray-600 dark:text-gray-300">Rampura, Dhaka, Bangladesh</li>
+              <li className="text-gray-600 dark:text-gray-300">+880 1687014788</li>
+              <li className="text-gray-600 dark:text-gray-300">khanrakib218@gmail.com</li>
             </ul>
           </div>
 
@@ -132,7 +132,7 @@ const FooterComponent = () => {
               className="flex items-center text-gray-600 dark:text-gray-300"
             >
               <BiCopyright className="mr-1" />
-              <span>{new Date().getFullYear()} John Doe. All rights reserved.</span>
+              <span>{new Date().getFullYear()} Rakib Khan. All rights reserved.</span>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
