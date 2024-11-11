@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import {
   LuGraduationCap,
@@ -65,28 +65,52 @@ const experiences: Experience[] = [
   },
 ];
 
+function useMediaQuery(query: string): boolean {
+  const [matches, setMatches] = useState<boolean>(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    const updateMatch = (e: MediaQueryListEvent | MediaQueryList) => {
+      setMatches(e.matches);
+    };
+
+    // Initial check
+    setMatches(media.matches);
+
+    // Add listener
+    if (typeof media.addEventListener === "function") {
+      media.addEventListener("change", updateMatch);
+      return () => media.removeEventListener("change", updateMatch);
+    } else {
+      // Fallback for older browsers
+      media.addListener(updateMatch);
+      return () => media.removeListener(updateMatch);
+    }
+  }, [query]);
+
+  return matches;
+}
+
 const TimelineItem: React.FC<{ experience: Experience; index: number }> = ({
   experience,
   index,
 }) => {
-  const ref = React.useRef(null);
+  const ref = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const controls = useAnimation();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
 
   useEffect(() => {
-    const startControls = async () => {
-      if (isInView) {
-        await controls.start("visible");
-      }
-    };
-    void startControls();
+    if (isInView) {
+      void controls.start("visible");
+    }
   }, [isInView, controls]);
 
   const cardVariants = {
     hidden: {
       opacity: 0,
-      x: index % 2 === 0 ? 50 : -50,
       y: 20,
+      x: isDesktop ? (index % 2 === 0 ? 50 : -50) : 0,
     },
     visible: {
       opacity: 1,
@@ -113,9 +137,9 @@ const TimelineItem: React.FC<{ experience: Experience; index: number }> = ({
   };
 
   return (
-    <div ref={ref} className="mb-12 md:mb-16 z-[-50]">
+    <div ref={ref} className="mb-12 md:mb-16">
       <div
-        className={`flex flex-col items-center md:flex-row ${
+        className={`relative flex flex-col items-center md:flex-row ${
           index % 2 === 0 ? "md:flex-row-reverse" : ""
         }`}
       >
@@ -136,7 +160,7 @@ const TimelineItem: React.FC<{ experience: Experience; index: number }> = ({
 
         {/* Content */}
         <div
-          className={`w-full md:w-1/2 ${
+          className={`w-full overflow-hidden md:w-1/2 ${
             index % 2 === 0 ? "md:pr-16" : "md:pl-16"
           }`}
         >
