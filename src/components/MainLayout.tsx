@@ -9,7 +9,7 @@ import ExperienceSection from "./Experience";
 import Contact from "./Contact";
 import ScrollToTop from "~/Elements/ScrollToTop";
 import FloatingChatBot from "~/Elements/CustomMessenger";
-import AnimatedGitHubCalendar from "./GithubCalender";
+// import AnimatedGitHubCalendar from "./GithubCalender";
 import BottomNav from "~/Elements/BottomNavigation";
 
 const MainLayout = () => {
@@ -26,10 +26,10 @@ const MainLayout = () => {
         <NavbarComponent />
       </div>
       <HeroSection />
-      <AnimatedGitHubCalendar
+      {/* <AnimatedGitHubCalendar
         githubToken="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"
         username="rakibkhanofficial"
-      />
+      /> */}
       <SkillsSection />
       <ProjectsSection />
       <ExperienceSection />

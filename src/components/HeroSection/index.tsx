@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
@@ -46,13 +46,15 @@ const HeroSection = () => {
     duration: Math.random() * 2 + 2,
   }));
 
-  const handleDownload = () => {
-    // Trigger download for the CV file located in the public folder
-    const link = document.createElement("a");
-    link.href = "/resume/Abul_Bashar_Khan_Rakib.pdf"; // Adjust the path if your CV file has a different name or folder
-    link.download = "Abul_Bashar_Khan_Rakib.pdf"; // This sets the download file name
+  const handleDownload = useCallback(() => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/resume/Abul_Bashar_Khan_Rakib.pdf';
+    link.download = 'Abul_Bashar_Khan_Rakib.pdf';
+    document.body.appendChild(link);
     link.click();
-  };
+    document.body.removeChild(link);
+  }, []);
 
   return (
     <div className="relative min-h-screen z-[-50] overflow-hidden bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
@@ -125,10 +127,10 @@ const HeroSection = () => {
               className="flex flex-wrap gap-4"
             >
               <motion.button
+                onClick={handleDownload}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
-                onClick={handleDownload}
+                className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
               >
                 <HiDownload className="h-5 w-5" />
                 Download CV
@@ -137,18 +139,20 @@ const HeroSection = () => {
                 <motion.a
                   href="https://github.com/rakibkhanofficial/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                  className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                 >
                   <FaGithub className="h-5 w-5" />
                 </motion.a>
                 <motion.a
                   href="https://linkedin.com/in/rakibkhanofficial/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                  className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                 >
                   <FaLinkedinIn className="h-5 w-5" />
                 </motion.a>
@@ -198,7 +202,7 @@ const HeroSection = () => {
               >
                 <Image
                   src="/heroimage/hero.jpeg"
-                  alt="John Doe"
+                  alt="Rakib Khan"
                   className="h-full w-full object-cover"
                 />
               </motion.div>

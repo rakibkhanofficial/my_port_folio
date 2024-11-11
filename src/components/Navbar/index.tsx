@@ -10,18 +10,11 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   { label: "Home", id: "home", minHeight: "100vh" },
-  { label: "Contributions", id: "contributions", minHeight: "80vh" },
   { label: "Skills", id: "skills", minHeight: "90vh" },
   { label: "Projects", id: "projects", minHeight: "100vh" },
   { label: "Experience", id: "experience", minHeight: "85vh" },
   { label: "Contact", id: "contact", minHeight: "70vh" }
 ];
-
-interface Section {
-  id: string;
-  top: number;
-  bottom: number;
-}
 
 const GlossyNavbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
@@ -34,69 +27,72 @@ const GlossyNavbar: React.FC = () => {
     ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 0.8)"]
   );
 
+  // Improved scroll spy functionality
   useEffect(() => {
-    const handleResize = (): void => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };
 
-    const handleScroll = (): void => {
-      requestAnimationFrame(() => {
-        const sections: Section[] = menuItems
-          .map(({ id }) => {
-            const element = document.getElementById(id);
-            if (!element) return null;
-            
-            const rect = element.getBoundingClientRect();
-            return {
-              id,
-              top: rect.top,
-              bottom: rect.bottom
-            };
-          })
-          .filter((section): section is Section => section !== null);
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      
+      // Find the current active section
+      for (const item of menuItems) {
+        const element = document.getElementById(item.id);
+        if (!element) continue;
+        
+        const rect = element.getBoundingClientRect();
+        const offsetTop = element.offsetTop;
+        const offsetBottom = offsetTop + rect.height;
 
-        const viewportHeight = window.innerHeight;
-        let maxVisibleSection = sections[0]?.id;
-        let maxVisibleHeight = 0;
-
-        sections.forEach((section) => {
-          const visibleHeight = Math.min(section.bottom, viewportHeight) - 
-                              Math.max(section.top, 0);
-          
-          if (visibleHeight > maxVisibleHeight) {
-            maxVisibleHeight = visibleHeight;
-            maxVisibleSection = section.id;
+        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+          if (activeSection !== item.id) {
+            setActiveSection(item.id);
           }
-        });
-
-        if (maxVisibleSection && maxVisibleSection !== activeSection) {
-          setActiveSection(maxVisibleSection);
+          break;
         }
-      });
+      }
+    };
+
+    // Throttle scroll event
+    let ticking = false;
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("resize", handleResize);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", scrollListener, { passive: true });
     handleResize();
+    handleScroll(); // Initial check
     
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", scrollListener);
     };
   }, [activeSection]);
 
-  const scrollToSection = (id: string): void => {
+  // Improved smooth scroll functionality
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) {
-      const navHeight = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+    if (!element) return;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
+    const navHeight = 80; // Height of the navigation bar
+    const elementPosition = element.offsetTop;
+    const offsetPosition = elementPosition - navHeight;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+
+    // Update active section immediately for better UX
+    setActiveSection(id);
   };
 
   return (
@@ -115,7 +111,7 @@ const GlossyNavbar: React.FC = () => {
           
           <div className="relative h-full mx-auto max-w-[1400px] px-6">
             <div className="flex h-full items-center justify-between">
-              <div className="text-xl font-bold">Logo</div>
+              <div className="text-xl text-blue-600 dark:border-blue-500/20 dark:text-blue-400 font-bold">Rakib Khan</div>
               
               {!isMobile && (
                 <div className="flex items-center gap-8">
@@ -124,7 +120,7 @@ const GlossyNavbar: React.FC = () => {
                       key={item.id}
                       whileHover={{ scale: 1.02 }}
                       onClick={() => scrollToSection(item.id)}
-                      className={`relative text-base font-medium ${
+                      className={`relative text-base font-medium transition-colors duration-200 ${
                         activeSection === item.id
                           ? "text-purple-500"
                           : "text-gray-700 hover:text-purple-700 dark:text-gray-200 dark:hover:text-purple-400"
