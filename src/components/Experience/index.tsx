@@ -5,7 +5,6 @@ import {
   LuBriefcase,
   LuCalendar,
   LuMapPin,
-  LuCheckCircle,
   LuBuilding,
 } from "react-icons/lu";
 
@@ -200,7 +199,7 @@ const TimelineItem: React.FC<{ experience: Experience; index: number }> = ({
             <ul className="mb-4 space-y-2 text-gray-600 dark:text-gray-400">
               {experience.description.map((desc, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <LuCheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-blue-500" />
+                  {/*<LuCheckCircle className="mt-1 h-4 w-4 flex-shrink-0 text-blue-500" />*/}
                   <span>{desc}</span>
                 </li>
               ))}

@@ -1,8 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { Image } from "@nextui-org/react";
+import Link from "next/link";
 
 const HeroSection = () => {
   const containerVariants = {
@@ -46,47 +47,39 @@ const HeroSection = () => {
     duration: Math.random() * 2 + 2,
   }));
 
-  const handleDownload = useCallback(() => {
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = '/resume/Abul_Bashar_Khan_Rakib.pdf';
-    link.download = 'Abul_Bashar_Khan_Rakib.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }, []);
-
   return (
-    <div className="relative min-h-screen z-[-50] overflow-hidden bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
-      {/* Animated background circles */}
-      {circles.map((circle, index) => (
-        <motion.div
-          key={index}
-          className="absolute rounded-full bg-blue-500/5 dark:bg-blue-500/10"
-          style={{
-            width: circle.size,
-            height: circle.size,
-            left: `${circle.x}%`,
-            top: `${circle.y}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: circle.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
+      {/* Animated background circles - lowered z-index */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {circles.map((circle, index) => (
+          <motion.div
+            key={index}
+            className="absolute rounded-full bg-blue-500/5 dark:bg-blue-500/10"
+            style={{
+              width: circle.size,
+              height: circle.size,
+              left: `${circle.x}%`,
+              top: `${circle.y}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: circle.duration,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+      </div>
 
-      {/* Main content */}
+      {/* Main content - increased z-index */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="container mx-auto px-4 pb-16 pt-24 sm:px-6 lg:px-8"
+        className="container relative z-10 mx-auto px-4 pb-16 pt-24 sm:px-6 lg:px-8"
       >
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row">
           {/* Left content */}
@@ -121,42 +114,56 @@ const HeroSection = () => {
               </motion.p>
             </motion.div>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons - with improved button structure and z-index */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-4"
+              className="relative z-20 flex flex-wrap gap-4"
             >
-              <motion.button
-                onClick={handleDownload}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
-              >
-                <HiDownload className="h-5 w-5" />
-                Download CV
-              </motion.button>
-              <motion.div className="flex gap-4">
-                <motion.a
-                  href="https://github.com/rakibkhanofficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+              {/* Download CV Button */}
+              <Link href="/resume" className="z-20">
+                <motion.div
+                  className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
                 >
-                  <FaGithub className="h-5 w-5" />
-                </motion.a>
-                <motion.a
-                  href="https://linkedin.com/in/rakibkhanofficial/"
-                  target="_blank"
+                  <HiDownload className="h-5 w-5" />
+                  Download CV
+                </motion.div>
+              </Link>
+              
+              <div className="flex gap-4">
+                {/* GitHub Link */}
+                <Link 
+                  href="https://github.com/rakibkhanofficial/" 
+                  target="_blank" 
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                  className="z-20"
                 >
-                  <FaLinkedinIn className="h-5 w-5" />
-                </motion.a>
-              </motion.div>
+                  <motion.div
+                    className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub className="h-5 w-5" />
+                  </motion.div>
+                </Link>
+                
+                {/* LinkedIn Link */}
+                <Link 
+                  href="https://linkedin.com/in/rakibkhanofficial/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="z-20"
+                >
+                  <motion.div
+                    className="flex cursor-pointer items-center justify-center rounded-lg bg-gray-100 p-3 text-gray-600 transition-colors hover:bg-gray-200 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaLinkedinIn className="h-5 w-5" />
+                  </motion.div>
+                </Link>
+              </div>
             </motion.div>
 
             {/* Stats */}
@@ -189,7 +196,7 @@ const HeroSection = () => {
           {/* Right content - Profile Image */}
           <motion.div
             variants={itemVariants}
-            className="relative max-w-md flex-1"
+            className="relative z-10 max-w-md flex-1"
             animate={floatingAnimation}
           >
             <div className="relative">
@@ -214,10 +221,10 @@ const HeroSection = () => {
         </div>
       </motion.div>
 
-      {/* Tech stack marquee */}
+      {/* Tech stack marquee - adjusted z-index */}
       <motion.div
         variants={itemVariants}
-        className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-gray-50/0 via-gray-50/80 to-gray-50/0 py-4 dark:from-gray-900/0 dark:via-gray-900/80 dark:to-gray-900/0"
+        className="absolute bottom-0 left-0 right-0 z-10 bg-gradient-to-r from-gray-50/0 via-gray-50/80 to-gray-50/0 py-4 dark:from-gray-900/0 dark:via-gray-900/80 dark:to-gray-900/0"
       >
         <div className="flex items-center justify-center gap-8 text-gray-500 dark:text-gray-400">
           <motion.span

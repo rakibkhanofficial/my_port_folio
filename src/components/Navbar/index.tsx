@@ -98,7 +98,7 @@ const GlossyNavbar: React.FC = () => {
   return (
     <>
       <motion.nav
-        className="fixed left-0 right-0 top-0 z-[20000] h-20 w-full"
+        className="fixed left-0 right-0 top-0 z-[500] h-20 w-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
