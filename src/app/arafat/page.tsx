@@ -13,7 +13,7 @@ import {
 } from "react-icons/fi";
 import Image from "next/image";
 
-const ResumePage = () => {
+const ArafatResumePage = () => {
   const resumeRef = useRef(null);
   const handlePrint = useReactToPrint({
     content: () => resumeRef.current,
@@ -367,5 +367,5 @@ const ResumePage = () => {
   );
 };
 
-export default ResumePage;
+export default ArafatResumePage;
 
