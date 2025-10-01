@@ -86,6 +86,8 @@ const ResumePage: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Summary Section */}
           <div className="mt-4 flex flex-col gap-6 md:flex-row print:flex-row print:gap-4">
             <div className="w-full md:w-1/3 print:w-1/3">
               <div className="mb-4">
@@ -94,26 +96,25 @@ const ResumePage: React.FC = () => {
                 </h3>
                 <p className="text-xs text-gray-600">
                   Dedicated{" "}
-                  <span className="font-medium">Frontend Developer</span> with{" "}
-                  <span className="font-medium">2.5+ years</span> of experience
-                  building{" "}
+                  <span className="font-medium">Frontend Developer</span>{" "}
+                  with <span className="font-medium">3+ years</span> of
+                  experience delivering high-quality web applications using{" "}
                   <span className="font-medium">
-                    responsive, accessible web applications
-                  </span>{" "}
-                  using{" "}
-                  <span className="font-medium">
-                    HTML, CSS, JavaScript, React.js 18, and Next.js
+                    React.js, Next.js, Tailwind CSS, and NestJS
                   </span>
-                  . Skilled in creating{" "}
-                  <span className="font-medium">pixel-perfect UI</span>,
-                  optimizing performance (e.g., reduced load times by 2
-                  seconds), and collaborating with{" "}
-                  <span className="font-medium">UX/UI designers</span> to ensure{" "}
-                  <span className="font-medium">SEO and accessibility</span>{" "}
-                  standards. Proficient in modern frontend workflows and state
-                  management.
+                  . Experienced in{" "}
+                  <span className="font-medium">
+                    leading small teams, mentoring developers
+                  </span>
+                  , and implementing scalable full-stack solutions. Skilled in{" "}
+                  <span className="font-medium">
+                    performance optimization, SEO, and accessible UI development
+                  </span>{" "}
+                  for enterprise-level projects.
                 </p>
               </div>
+
+              {/* Technical Skills */}
               <div className="mb-4">
                 <h3 className="mb-2 border-b border-gray-200 pb-1 text-base font-semibold text-gray-800">
                   Technical Skills
@@ -150,6 +151,8 @@ const ResumePage: React.FC = () => {
                   </ul>
                 </div>
               </div>
+
+              {/* Education */}
               <div className="mb-4">
                 <h3 className="mb-2 border-b border-gray-200 pb-1 text-base font-semibold text-gray-800">
                   Education
@@ -167,11 +170,14 @@ const ResumePage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Work Experience */}
             <div className="w-full md:w-2/3 print:w-2/3">
               <div className="mb-4">
                 <h3 className="mb-2 border-b border-gray-200 pb-1 text-base font-semibold text-gray-800">
                   Work Experience
                 </h3>
+
                 <div className="mb-3">
                   <div className="flex items-center justify-between">
                     <h4 className="text-sm font-medium text-gray-800">
@@ -184,37 +190,34 @@ const ResumePage: React.FC = () => {
                   <p className="text-xs text-gray-500">Dhaka, Bangladesh</p>
                   <ul className="ml-4 mt-1 list-outside list-disc space-y-0.5 text-xs text-gray-600">
                     <li>
-                      Developed{" "}
+                      Delivered{" "}
                       <span className="font-medium">
                         5+ responsive web applications
                       </span>{" "}
-                      using HTML, CSS, JavaScript, React.js 18, and Next.js,
-                      achieving 99.9% uptime
+                      using React.js, Next.js, and Tailwind CSS, achieving high
+                      reliability and performance.
+                    </li>
+                    <li>
+                      Gained professional{" "}
+                      <span className="font-medium">leadership experience</span>{" "}
+                      by mentoring junior developers and guiding frontend team
+                      workflows.
                     </li>
                     <li>
                       Implemented{" "}
-                      <span className="font-medium">server-side rendering</span>{" "}
-                      and <span className="font-medium">code splitting</span>,
-                      reducing load times by{" "}
-                      <span className="font-medium">2 seconds</span>
-                    </li>
-                    <li>
-                      Collaborated with{" "}
-                      <span className="font-medium">UX/UI designers</span> to
-                      design{" "}
                       <span className="font-medium">
-                        accessible UI components
-                      </span>{" "}
-                      with Tailwind CSS, increasing user engagement by{" "}
-                      <span className="font-medium">25%</span>
+                        server-side rendering, code splitting
+                      </span>
+                      , and optimized performance, reducing load times by{" "}
+                      <span className="font-medium">2 seconds</span>.
                     </li>
                     <li>
-                      Worked with{" "}
-                      <span className="font-medium">backend developers</span> to
-                      integrate RESTful APIs, optimizing frontend performance
+                      Collaborated with backend developers to integrate RESTful
+                      APIs and build full-stack solutions.
                     </li>
                   </ul>
                 </div>
+
                 <div>
                   <div className="flex items-center justify-between">
                     <h4 className="text-sm font-medium text-gray-800">
@@ -227,24 +230,24 @@ const ResumePage: React.FC = () => {
                   <p className="text-xs text-gray-500">Dhaka, Bangladesh</p>
                   <ul className="ml-4 mt-1 list-outside list-disc space-y-0.5 text-xs text-gray-600">
                     <li>
-                      Built responsive UI components using HTML, CSS, and
-                      JavaScript, improving API response time by{" "}
-                      <span className="font-medium">30%</span>
+                      Developed responsive UI components and improved API
+                      response times by <span className="font-medium">30%</span>
+                      .
                     </li>
                     <li>
-                      Collaborated with{" "}
-                      <span className="font-medium">
-                        senior developers and UX/UI designers
-                      </span>{" "}
-                      to implement frontend functionality
+                      Collaborated with senior developers and designers to
+                      implement frontend functionality for enterprise
+                      applications.
                     </li>
                     <li>
                       Participated in Agile ceremonies including daily stand-ups
-                      and sprint planning
+                      and sprint planning.
                     </li>
                   </ul>
                 </div>
               </div>
+
+              {/* Key Projects */}
               <div>
                 <h3 className="mb-2 border-b border-gray-200 pb-1 text-base font-semibold text-gray-800">
                   Key Projects
@@ -266,7 +269,12 @@ const ResumePage: React.FC = () => {
                     </p>
                     <p className="mt-0.5 text-xs text-gray-600">
                       Developed a full-stack e-commerce platform with
-                      server-side rendering, reducing load times by 45%.
+                      server-side rendering, reducing load times by 45% and
+                      implementing{" "}
+                      <span className="font-medium">
+                        NextAuth authentication
+                      </span>{" "}
+                      for secure user login.
                     </p>
                   </div>
                   <div className="rounded-sm border border-gray-100 bg-gray-50 p-2">
@@ -310,27 +318,28 @@ const ResumePage: React.FC = () => {
                   <div className="rounded-sm border border-gray-100 bg-gray-50 p-2">
                     <div className="flex items-center justify-between">
                       <h4 className="text-sm font-medium text-blue-600">
-                        Beach Limo
+                        Store Sales & Inventory Management
                       </h4>
                       <span className="text-xs text-gray-500">
                         Jan 2024 – Oct 2024
                       </span>
                     </div>
-                    <p className="text-xs text-gray-600">
-                      <span className="font-medium">Tech:</span> HTML, CSS,
-                      JavaScript, React.js 18, Next.js, NestJS, TypeScript,
-                      MySQL, Vercel
-                    </p>
+                    {/* <p className="text-xs text-gray-600">
+                      <span className="font-medium">Tech:</span> React.js,
+                      Next.js, Tailwind CSS, NestJS, MySQL, NextAuth
+                    </p> */}
                     <p className="mt-0.5 text-xs text-gray-600">
-                      Developed a car booking app with real-time availability
-                      and secure payments.
+                      Developed a POS and inventory system with real-time
+                      tracking, secure authentication.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className=" flex flex-col gap-6 md:flex-row print:flex-row print:gap-4">
+
+          {/* Certifications & Awards */}
+          <div className="flex flex-col gap-6 md:flex-row print:flex-row print:gap-4">
             <div className="w-full md:w-1/3 print:w-1/3">
               <h3 className="mb-2 border-b border-gray-200 pb-1 text-base font-semibold text-gray-800">
                 Certifications
@@ -383,7 +392,7 @@ const ResumePage: React.FC = () => {
                   Akij Venture Group (May 2025)
                 </p>
                 <p className="mt-1 text-xs text-gray-600">
-                  Recognizing groundbreaking contributions and exceptional
+                  Recognized for groundbreaking contributions and exceptional
                   innovation.
                 </p>
               </div>
@@ -396,7 +405,6 @@ const ResumePage: React.FC = () => {
 };
 
 export default ResumePage;
-
 
 // "use client";
 
