@@ -127,7 +127,7 @@ const FrontendDeveloperWithImageResume: React.FC = () => {
               </h3>
               <p className="mt-1.5 text-xs leading-relaxed text-gray-700">
                 <strong>Passionate Frontend Developer</strong> with{" "}
-                <strong>2.5+ years of specialized experience</strong> building
+                <strong>3 years of specialized experience</strong> building
                 modern, responsive web applications using{" "}
                 <strong>React.js, Next.js, and TypeScript</strong>. Expert in{" "}
                 <strong>performance optimization</strong> (achieved{" "}
@@ -600,6 +600,24 @@ const FrontendDeveloperWithImageResume: React.FC = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+            {/* Reference */}
+            <div className="mt-3 print:break-inside-avoid">
+              <h3 className="border-b-2 border-blue-600 pb-0.5 text-base font-bold uppercase text-gray-900">
+                Reference
+              </h3>
+              <div className="mt-2 text-xs text-gray-700">
+                <p>
+                  <strong>Name:</strong> Md. Golam Kibria Konock
+                </p>
+                <p>
+                  <strong>Designation:</strong> Head of Information Technology,
+                  Akij Group
+                </p>
+                <p>
+                  <strong>Phone:</strong> +880 1710-375684
+                </p>
               </div>
             </div>
           </div>

@@ -554,7 +554,7 @@ const ModerFrontendWithImage: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="print:break-inside-avoid">
+                {/* <div className="print:break-inside-avoid">
                   <div className="flex items-start justify-between">
                     <h4 className="text-sm font-bold text-gray-900">
                       🌐 Corporate Portfolio Websites - Akij Group Sister
@@ -584,7 +584,7 @@ const ModerFrontendWithImage: React.FC = () => {
                       for comprehensive monitoring and user behavior analysis
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -675,6 +675,24 @@ const ModerFrontendWithImage: React.FC = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+            {/* Reference */}
+            <div className="mt-3 print:break-inside-avoid">
+              <h3 className="border-b-2 border-blue-600 pb-0.5 text-base font-bold uppercase text-gray-900">
+                Reference
+              </h3>
+              <div className="mt-2 text-xs text-gray-700">
+                <p>
+                  <strong>Name:</strong> Md. Golam Kibria Konock
+                </p>
+                <p>
+                  <strong>Designation:</strong> Head of Information Technology,
+                  Akij Group
+                </p>
+                <p>
+                  <strong>Phone:</strong> +880 1710-375684
+                </p>
               </div>
             </div>
           </div>

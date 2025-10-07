@@ -105,7 +105,8 @@ const FullStackModernWithoutImage: React.FC = () => {
             <div className="border-b-2 border-gray-300 pb-1 text-center">
               <h1 className="text-2xl font-bold text-gray-900">RAKIB KHAN</h1>
               <h2 className="mt-0.5 text-lg font-semibold text-blue-600">
-                Full-Stack Developer (Frontend Focus) | React.js • Next.js • TypeScript • Node.js
+                Full-Stack Developer (Frontend Focus) | React.js • Next.js •
+                TypeScript • Node.js
               </h2>
               <div className="mt-1 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-gray-700">
                 <div className="flex items-center gap-1">
@@ -148,7 +149,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                     ✓ Full-Stack Expertise
                   </h4>
                   <p className="mt-0.5 text-gray-700">
-                    <strong>Frontend mastery</strong> with React/Next.js + <strong>Backend proficiency</strong> in Node.js/NestJS
+                    <strong>Frontend mastery</strong> with React/Next.js +{" "}
+                    <strong>Backend proficiency</strong> in Node.js/NestJS
                   </p>
                 </div>
                 <div>
@@ -156,7 +158,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                     ✓ Proven Performance Expert
                   </h4>
                   <p className="mt-0.5 text-gray-700">
-                    Deliver <strong>40-60% performance improvements</strong> across the stack
+                    Deliver <strong>40-60% performance improvements</strong>{" "}
+                    across the stack
                   </p>
                 </div>
                 <div>
@@ -164,7 +167,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                     ✓ End-to-End Solutions
                   </h4>
                   <p className="mt-0.5 text-gray-700">
-                    Build <strong>scalable architectures</strong> from database to UI
+                    Build <strong>scalable architectures</strong> from database
+                    to UI
                   </p>
                 </div>
                 <div>
@@ -172,7 +176,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                     ✓ Leadership & Collaboration
                   </h4>
                   <p className="mt-0.5 text-gray-700">
-                    Mentor teams to deliver <strong>enterprise solutions</strong>
+                    Mentor teams to deliver{" "}
+                    <strong>enterprise solutions</strong>
                   </p>
                 </div>
               </div>
@@ -184,7 +189,19 @@ const FullStackModernWithoutImage: React.FC = () => {
                 Professional Summary
               </h3>
               <p className="mt-1.5 text-xs leading-relaxed text-gray-700">
-                <strong>Full-Stack Developer with Frontend Focus</strong> and <strong>3+ years expertise</strong> in <strong>React.js, Next.js, TypeScript, Node.js, NestJS</strong>. Led development of <strong>5+ enterprise apps</strong> serving <strong>10K+ users</strong>. Optimized full-stack performance (<strong>45% faster loads</strong>, <strong>60% Core Web Vitals</strong>), SEO (<strong>50% traffic growth</strong>), and WCAG-compliant UI/UX. Expert in <strong>RESTful APIs, JWT/OAuth, MongoDB, MySQL, Redis</strong>. Skilled in Redux Toolkit, React Query, Tailwind, Jest/Cypress, Docker, CI/CD. Mentored juniors, code reviews. Awards: Best Innovation & Performer.
+                <strong>Full-Stack Developer with Frontend Focus</strong> and{" "}
+                <strong>3+ years expertise</strong> in{" "}
+                <strong>React.js, Next.js, TypeScript, Node.js, NestJS</strong>.
+                Led development of <strong>5+ enterprise apps</strong> serving{" "}
+                <strong>10K+ users</strong>. Optimized full-stack performance (
+                <strong>45% faster loads</strong>,{" "}
+                <strong>60% Core Web Vitals</strong>), SEO (
+                <strong>50% traffic growth</strong>), and WCAG-compliant UI/UX.
+                Expert in{" "}
+                <strong>RESTful APIs, JWT/OAuth, MongoDB, MySQL, Redis</strong>.
+                Skilled in Redux Toolkit, React Query, Tailwind, Jest/Cypress,
+                Docker, CI/CD. Mentored juniors, code reviews. Awards: Best
+                Innovation & Performer.
               </p>
               {/* Full-Stack Expertise Highlight Badges */}
               <div className="mt-1.5 rounded-md bg-gradient-to-r from-blue-50 to-indigo-50 p-2">
@@ -226,7 +243,13 @@ const FullStackModernWithoutImage: React.FC = () => {
                     ⭐ Frontend Development (Primary Expertise):
                   </h4>
                   <p className="mt-0.5 text-xs leading-relaxed text-gray-700">
-                    <strong>React.js 18</strong>, <strong>Next.js 13/14</strong>, <strong>TypeScript</strong>, JS (ES6+), HTML5, CSS3, <strong>Tailwind CSS</strong>, MUI, Styled Components, <strong>Redux Toolkit</strong>, Context API, <strong>React Query</strong>, SWR, Responsive Design, <strong>Performance Optimization</strong>, <strong>SEO</strong>, Accessibility (WCAG)
+                    <strong>React.js 18</strong>, <strong>Next.js 13/14</strong>
+                    , <strong>TypeScript</strong>, JS (ES6+), HTML5, CSS3,{" "}
+                    <strong>Tailwind CSS</strong>, MUI, Styled Components,{" "}
+                    <strong>Redux Toolkit</strong>, Context API,{" "}
+                    <strong>React Query</strong>, SWR, Responsive Design,{" "}
+                    <strong>Performance Optimization</strong>,{" "}
+                    <strong>SEO</strong>, Accessibility (WCAG)
                   </p>
                   <div className="mt-1 flex flex-wrap gap-1">
                     <span className="rounded-full bg-blue-600 px-2 py-0.5 text-xs font-semibold text-white">
@@ -250,7 +273,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                     ⚙️ Backend Development:
                   </h4>
                   <p className="mt-0.5 text-xs leading-relaxed text-gray-700">
-                    <strong>Node.js, Express.js, NestJS</strong>, RESTful API, JWT, OAuth 2.0, NextAuth, Microservices
+                    <strong>Node.js, Express.js, NestJS</strong>, RESTful API,
+                    JWT, OAuth 2.0, NextAuth, Microservices
                   </p>
                 </div>
 
@@ -268,7 +292,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                     Testing & Quality:
                   </h4>
                   <p className="mt-0.5 text-xs leading-relaxed text-gray-700">
-                    Jest, React Testing Library, Cypress, Unit/Integration Testing
+                    Jest, React Testing Library, Cypress, Unit/Integration
+                    Testing
                   </p>
                 </div>
 
@@ -322,22 +347,40 @@ const FullStackModernWithoutImage: React.FC = () => {
                     </div>
                     <ul className="mt-1.5 list-disc space-y-1 pl-4 text-xs leading-relaxed text-gray-700">
                       <li>
-                        <strong>Leading full-stack development</strong> for <strong>5+ enterprise apps</strong> serving <strong>10K+ users</strong>, using <strong>React.js 18, Next.js 14, TypeScript, Node.js, NestJS</strong>, achieving <strong>99.8% uptime</strong>
+                        <strong>Leading full-stack development</strong> for{" "}
+                        <strong>5+ enterprise apps</strong> serving{" "}
+                        <strong>10K+ users</strong>, using{" "}
+                        <strong>
+                          React.js 18, Next.js 14, TypeScript, Node.js, NestJS
+                        </strong>
+                        , achieving <strong>99.8% uptime</strong>
                       </li>
                       <li>
-                        <strong>Architected end-to-end solutions</strong> with <strong>NestJS, Express.js, MySQL, MongoDB</strong>, RESTful APIs, <strong>JWT/OAuth RBAC</strong>, Redis caching
+                        <strong>Architected end-to-end solutions</strong> with{" "}
+                        <strong>NestJS, Express.js, MySQL, MongoDB</strong>,
+                        RESTful APIs, <strong>JWT/OAuth RBAC</strong>, Redis
+                        caching
                       </li>
                       <li>
-                        <strong>Spearheaded optimizations</strong> with SSR, code splitting, lazy loading; reduced loads by <strong>45% (4.5s → 2.5s)</strong>, improved <strong>Core Web Vitals by 60%</strong>
+                        <strong>Spearheaded optimizations</strong> with SSR,
+                        code splitting, lazy loading; reduced loads by{" "}
+                        <strong>45% (4.5s → 2.5s)</strong>, improved{" "}
+                        <strong>Core Web Vitals by 60%</strong>
                       </li>
                       <li>
-                        <strong>Mentored 3 juniors</strong> via code reviews, pair programming; boosted productivity <strong>35%</strong>, reduced defects <strong>40%</strong>
+                        <strong>Mentored 3 juniors</strong> via code reviews,
+                        pair programming; boosted productivity{" "}
+                        <strong>35%</strong>, reduced defects{" "}
+                        <strong>40%</strong>
                       </li>
                       <li>
-                        <strong>Improved SEO/accessibility</strong> with semantic HTML, ARIA, WCAG 2.1 AA; <strong>50% organic traffic growth</strong>
+                        <strong>Improved SEO/accessibility</strong> with
+                        semantic HTML, ARIA, WCAG 2.1 AA;{" "}
+                        <strong>50% organic traffic growth</strong>
                       </li>
                       <li>
-                        <strong>Established testing</strong> with Jest, RTL, Cypress; <strong>85%+ coverage</strong>, fewer bugs
+                        <strong>Established testing</strong> with Jest, RTL,
+                        Cypress; <strong>85%+ coverage</strong>, fewer bugs
                       </li>
                     </ul>
                   </div>
@@ -364,13 +407,19 @@ const FullStackModernWithoutImage: React.FC = () => {
                     </div>
                     <ul className="mt-1.5 list-disc space-y-1 pl-4 text-xs leading-relaxed text-gray-700">
                       <li>
-                        <strong>Developed responsive UIs</strong> with <strong>React.js, JS, CSS</strong>; ensured cross-browser/mobile compatibility
+                        <strong>Developed responsive UIs</strong> with{" "}
+                        <strong>React.js, JS, CSS</strong>; ensured
+                        cross-browser/mobile compatibility
                       </li>
                       <li>
-                        <strong>Built RESTful APIs</strong> with Node.js/Express; implemented authentication and data validation
+                        <strong>Built RESTful APIs</strong> with
+                        Node.js/Express; implemented authentication and data
+                        validation
                       </li>
                       <li>
-                        <strong>Optimized API/data fetching</strong>; improved responses <strong>30%</strong> via state management/caching
+                        <strong>Optimized API/data fetching</strong>; improved
+                        responses <strong>30%</strong> via state
+                        management/caching
                       </li>
                     </ul>
                   </div>
@@ -390,20 +439,29 @@ const FullStackModernWithoutImage: React.FC = () => {
                     <h4 className="text-xs font-bold text-blue-700">
                       🚀 Akij Fair Value - Full-Stack E-Commerce Platform
                     </h4>
-                    <span className="text-xs text-gray-600">Jan 2023 – Present</span>
+                    <span className="text-xs text-gray-600">
+                      Jan 2023 – Present
+                    </span>
                   </div>
                   <p className="mt-0.5 text-xs font-medium text-gray-700">
-                    <strong>Frontend:</strong> React.js 18, Next.js 14, TypeScript, Tailwind | <strong>Backend:</strong> Express.js, MongoDB, NextAuth | <strong>DevOps:</strong> Docker, AWS S3
+                    <strong>Frontend:</strong> React.js 18, Next.js 14,
+                    TypeScript, Tailwind | <strong>Backend:</strong> Express.js,
+                    MongoDB, NextAuth | <strong>DevOps:</strong> Docker, AWS S3
                   </p>
                   <ul className="mt-1 list-disc space-y-0.5 pl-4 text-xs leading-relaxed text-gray-700">
                     <li>
-                      <strong>Architected full-stack platform</strong> with catalog, cart, <strong>Stripe/PayPal integration</strong>, order management
+                      <strong>Architected full-stack platform</strong> with
+                      catalog, cart, <strong>Stripe/PayPal integration</strong>,
+                      order management
                     </li>
                     <li>
-                      <strong>Implemented Next.js SSR/ISR</strong>; <strong>45% faster loads</strong>, <strong>60% SEO improvement</strong>
+                      <strong>Implemented Next.js SSR/ISR</strong>;{" "}
+                      <strong>45% faster loads</strong>,{" "}
+                      <strong>60% SEO improvement</strong>
                     </li>
                     <li>
-                      Built <strong>secure auth backend</strong> with <strong>NextAuth</strong> (Google/Facebook OAuth)
+                      Built <strong>secure auth backend</strong> with{" "}
+                      <strong>NextAuth</strong> (Google/Facebook OAuth)
                     </li>
                   </ul>
                 </div>
@@ -413,17 +471,25 @@ const FullStackModernWithoutImage: React.FC = () => {
                     <h4 className="text-xs font-bold text-blue-700">
                       💼 HRIS - Enterprise Human Resource Management System
                     </h4>
-                    <span className="text-xs text-gray-600">Jan 2024 – Present</span>
+                    <span className="text-xs text-gray-600">
+                      Jan 2024 – Present
+                    </span>
                   </div>
                   <p className="mt-0.5 text-xs font-medium text-gray-700">
-                    <strong>Frontend:</strong> React.js 18, Next.js 14, TypeScript, Tailwind, Chart.js | <strong>Backend:</strong> NestJS, MySQL, Prisma
+                    <strong>Frontend:</strong> React.js 18, Next.js 14,
+                    TypeScript, Tailwind, Chart.js | <strong>Backend:</strong>{" "}
+                    NestJS, MySQL, Prisma
                   </p>
                   <ul className="mt-1 list-disc space-y-0.5 pl-4 text-xs leading-relaxed text-gray-700">
                     <li>
-                      <strong>Developed full-stack solution</strong> for employee data, attendance, leave, payroll for <strong>500+ users</strong>
+                      <strong>Developed full-stack solution</strong> for
+                      employee data, attendance, leave, payroll for{" "}
+                      <strong>500+ users</strong>
                     </li>
                     <li>
-                      Implemented <strong>RBAC backend</strong> with NestJS; built <strong>real-time analytics dashboard</strong> with Chart.js
+                      Implemented <strong>RBAC backend</strong> with NestJS;
+                      built <strong>real-time analytics dashboard</strong> with
+                      Chart.js
                     </li>
                   </ul>
                 </div>
@@ -433,17 +499,23 @@ const FullStackModernWithoutImage: React.FC = () => {
                     <h4 className="text-xs font-bold text-blue-700">
                       🛡️ Warranty Wizard - Product Warranty Management Platform
                     </h4>
-                    <span className="text-xs text-gray-600">Oct 2023 – Present</span>
+                    <span className="text-xs text-gray-600">
+                      Oct 2023 – Present
+                    </span>
                   </div>
                   <p className="mt-0.5 text-xs font-medium text-gray-700">
-                    <strong>Frontend:</strong> React.js 18, Next.js 14, TypeScript | <strong>Backend:</strong> NestJS, MySQL, Docker, Redis
+                    <strong>Frontend:</strong> React.js 18, Next.js 14,
+                    TypeScript | <strong>Backend:</strong> NestJS, MySQL,
+                    Docker, Redis
                   </p>
                   <ul className="mt-1 list-disc space-y-0.5 pl-4 text-xs leading-relaxed text-gray-700">
                     <li>
-                      <strong>Created full-stack warranty system</strong> with notifications, claims, analytics
+                      <strong>Created full-stack warranty system</strong> with
+                      notifications, claims, analytics
                     </li>
                     <li>
-                      Optimized with <strong>Redis caching/React Query</strong>; <strong>40% faster API responses</strong>
+                      Optimized with <strong>Redis caching/React Query</strong>;{" "}
+                      <strong>40% faster API responses</strong>
                     </li>
                   </ul>
                 </div>
@@ -453,17 +525,23 @@ const FullStackModernWithoutImage: React.FC = () => {
                     <h4 className="text-xs font-bold text-blue-700">
                       🏪 Store Sales & Inventory - Point of Sale System
                     </h4>
-                    <span className="text-xs text-gray-600">Jan 2024 – Oct 2024</span>
+                    <span className="text-xs text-gray-600">
+                      Jan 2024 – Oct 2024
+                    </span>
                   </div>
                   <p className="mt-0.5 text-xs font-medium text-gray-700">
-                    <strong>Frontend:</strong> React.js 18, Next.js 14, TypeScript, Tailwind | <strong>Backend:</strong> NestJS, MySQL, NextAuth
+                    <strong>Frontend:</strong> React.js 18, Next.js 14,
+                    TypeScript, Tailwind | <strong>Backend:</strong> NestJS,
+                    MySQL, NextAuth
                   </p>
                   <ul className="mt-1 list-disc space-y-0.5 pl-4 text-xs leading-relaxed text-gray-700">
                     <li>
-                      <strong>Engineered full-stack POS</strong> with real-time inventory, barcode, multi-store support
+                      <strong>Engineered full-stack POS</strong> with real-time
+                      inventory, barcode, multi-store support
                     </li>
                     <li>
-                      Built <strong>customizable dashboard/reports</strong> with data visualization for insights
+                      Built <strong>customizable dashboard/reports</strong> with
+                      data visualization for insights
                     </li>
                   </ul>
                 </div>
@@ -485,7 +563,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                       Lovely Professional University, Punjab, India
                     </p>
                     <p className="mt-0.5 text-xs text-gray-600">
-                      Focus: Web Development, Data Structures, Software Engineering
+                      Focus: Web Development, Data Structures, Software
+                      Engineering
                     </p>
                   </div>
                   <span className="text-xs font-medium text-gray-700">
@@ -505,17 +584,24 @@ const FullStackModernWithoutImage: React.FC = () => {
                   <li>
                     <strong>Advanced React</strong> - Meta (Coursera)
                     <br />
-                    <span className="text-gray-600">Advanced patterns, hooks, optimization</span>
+                    <span className="text-gray-600">
+                      Advanced patterns, hooks, optimization
+                    </span>
                   </li>
                   <li>
-                    <strong>Data Structures & Algorithms</strong> - GeeksforGeeks
+                    <strong>Data Structures & Algorithms</strong> -
+                    GeeksforGeeks
                     <br />
-                    <span className="text-gray-600">Problem-solving, algorithmic thinking</span>
+                    <span className="text-gray-600">
+                      Problem-solving, algorithmic thinking
+                    </span>
                   </li>
                   <li>
                     <strong>Developing Front-End Apps with React</strong> - IBM
                     <br />
-                    <span className="text-gray-600">Modern React practices</span>
+                    <span className="text-gray-600">
+                      Modern React practices
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -532,7 +618,8 @@ const FullStackModernWithoutImage: React.FC = () => {
                       Akij Venture Group | May 2025
                     </p>
                     <p className="mt-0.5 text-xs leading-relaxed text-gray-700">
-                      For innovative <strong>full-stack solutions</strong> improving UX and performance
+                      For innovative <strong>full-stack solutions</strong>{" "}
+                      improving UX and performance
                     </p>
                   </div>
                   <div className="rounded-md border-l-4 border-blue-500 bg-blue-50 p-1.5">
@@ -543,10 +630,29 @@ const FullStackModernWithoutImage: React.FC = () => {
                       Akij Venture Group | June 2024
                     </p>
                     <p className="mt-0.5 text-xs leading-relaxed text-gray-700">
-                      For outstanding <strong>contributions</strong> and high-quality apps
+                      For outstanding <strong>contributions</strong> and
+                      high-quality apps
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+            {/* Reference */}
+            <div className="mt-3 print:break-inside-avoid">
+              <h3 className="border-b-2 border-blue-600 pb-0.5 text-base font-bold uppercase text-gray-900">
+                Reference
+              </h3>
+              <div className="mt-2 text-xs text-gray-700">
+                <p>
+                  <strong>Name:</strong> Md. Golam Kibria Konock
+                </p>
+                <p>
+                  <strong>Designation:</strong> Head of Information Technology,
+                  Akij Group
+                </p>
+                <p>
+                  <strong>Phone:</strong> +880 1710-375684
+                </p>
               </div>
             </div>
           </div>

@@ -714,6 +714,25 @@ const FullstackwithoutImage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Reference */}
+            <div className="mt-3 print:break-inside-avoid">
+              <h3 className="border-b-2 border-blue-600 pb-0.5 text-base font-bold uppercase text-gray-900">
+                Reference
+              </h3>
+              <div className="mt-2 text-xs text-gray-700">
+                <p>
+                  <strong>Name:</strong> Md. Golam Kibria Konock
+                </p>
+                <p>
+                  <strong>Designation:</strong> Head of Information Technology,
+                  Akij Group
+                </p>
+                <p>
+                  <strong>Phone:</strong> +880 1710-375684
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
