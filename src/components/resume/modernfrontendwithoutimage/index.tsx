@@ -13,7 +13,7 @@ import {
 } from "react-icons/fi";
 import { MdOutlineLanguage } from "react-icons/md";
 
-const ModerResume: React.FC = () => {
+const ModerFrontendWithoutImage: React.FC = () => {
   const resumeRef = useRef<HTMLDivElement>(null);
 
   const handlePrint = useReactToPrint({
@@ -28,6 +28,12 @@ const ModerResume: React.FC = () => {
           @page {
             margin: 0.25in;
             size: letter;
+          }
+
+         /* Hide browser's default header and footer */
+          html, body {
+            margin: 0 !important;
+            padding: 0 !important;
           }
           
           body {
@@ -559,57 +565,6 @@ const ModerResume: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-
-                {/* <div className="print:break-inside-avoid">
-                  <div className="flex items-start justify-between">
-                    <h4 className="text-sm font-bold text-gray-900">
-                      🎯 Brand Landing Pages - SPEED, Clemon, MOJO, Frutika
-                    </h4>
-                    <span className="text-xs text-gray-600">
-                      2023 – Present
-                    </span>
-                  </div>
-                  <p className="mt-0.5 text-xs text-gray-700">
-                    <strong>Tech:</strong> React.js, Next.js 14, TypeScript,
-                    Tailwind CSS, Framer Motion
-                  </p>
-                  <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs leading-relaxed text-gray-700">
-                    <li>
-                      Created <strong>modern single-page websites</strong> for
-                      multiple Akij brands with engaging animations and
-                      interactive UI
-                    </li>
-                    <li>
-                      Implemented <strong>responsive designs</strong> and
-                      optimized performance for mobile-first experiences
-                    </li>
-                  </ul>
-                </div> */}
-
-                {/* <div className="print:break-inside-avoid">
-                  <div className="flex items-start justify-between">
-                    <h4 className="text-sm font-bold text-gray-900">
-                      🤝 We Support Palestine By Mojo - Donation Collection
-                      Platform
-                    </h4>
-                    <span className="text-xs text-gray-600">2024</span>
-                  </div>
-                  <p className="mt-0.5 text-xs text-gray-700">
-                    <strong>Tech:</strong> React.js, Next.js, Tailwind CSS,
-                    Stripe, Express.js, MongoDB
-                  </p>
-                  <ul className="mt-1 list-disc space-y-0.5 pl-5 text-xs leading-relaxed text-gray-700">
-                    <li>
-                      Built <strong>humanitarian donation website</strong> with
-                      secure payment gateway and real-time donation tracking
-                    </li>
-                    <li>
-                      Implemented{" "}
-                      <strong>transparent fundraising dashboard</strong> with
-                      progress visualization and donor management
-                    </li>
-                  </ul>
-                </div> */}
               </div>
             </div>
 
@@ -661,11 +616,6 @@ const ModerResume: React.FC = () => {
                       Problem-solving, algorithmic thinking
                     </span>
                   </li>
-                  {/* <li>
-                    <strong>AWS Certified Cloud Practitioner</strong> - AWS
-                    <br />
-                    <span className="text-gray-600">Cloud fundamentals</span>
-                  </li> */}
                   <li>
                     <strong>Developing Front-End Apps with React</strong> - IBM
                     <br />
@@ -714,4 +664,4 @@ const ModerResume: React.FC = () => {
   );
 };
 
-export default ModerResume;
+export default ModerFrontendWithoutImage;

@@ -1,5 +1,5 @@
 import React from "react";
-import WithoutImageResume from "~/components/resume/withoutimage";
+import WithoutImageResume from "~/components/resume/frontendwithoutimage";
 
 const WithoutResumePage = () => {
   return (

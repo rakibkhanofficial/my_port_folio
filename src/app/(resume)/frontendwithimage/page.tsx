@@ -1,5 +1,5 @@
 import React from "react";
-import WithImageResume from "~/components/resume/withimage";
+import WithImageResume from "~/components/resume/frontendwithimage";
 
 const WithResumePage = () => {
   return (
