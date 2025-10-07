@@ -396,10 +396,6 @@ const FullStackModernWithImage: React.FC = () => {
                         semantic HTML, ARIA, WCAG 2.1 AA;{" "}
                         <strong>50% organic traffic growth</strong>
                       </li>
-                      <li>
-                        <strong>Established testing</strong> with Jest, RTL,
-                        Cypress; <strong>85%+ coverage</strong>, fewer bugs
-                      </li>
                     </ul>
                   </div>
                 </div>

@@ -120,7 +120,7 @@ const HeroSection = () => {
               className="relative z-20 flex flex-wrap gap-4"
             >
               {/* Download CV Button */}
-              <Link href="/resume" className="z-20">
+              <Link href="/resumes" className="z-20">
                 <motion.div
                   className="flex cursor-pointer items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
                   whileHover={{ scale: 1.05 }}

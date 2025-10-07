@@ -25,11 +25,10 @@ const FrontendDeveloperWithOutImageResume: React.FC = () => {
       <style>{`
         @media print {
           @page {
-            margin: 0.5in;
+            margin: 0.3in;
             size: letter;
           }
 
-           /* Hide browser's default header and footer */
           html, body {
             margin: 0 !important;
             padding: 0 !important;
@@ -260,42 +259,49 @@ const FrontendDeveloperWithOutImageResume: React.FC = () => {
                   </ul>
                 </div>
 
-                {/* Previous Position */}
-                <div className="relative print:break-inside-avoid">
-                  {/* Timeline Dot */}
-                  <div className="absolute -left-4 top-1 h-3 w-3 rounded-full border-2 border-blue-400 bg-white"></div>
+{/* Previous Position */}
+<div className="relative print:break-inside-avoid">
+  {/* Timeline Dot */}
+  <div className="absolute -left-4 top-1 h-3 w-3 rounded-full border-2 border-blue-400 bg-white"></div>
 
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h4 className="text-sm font-bold text-gray-900">
-                        Frontend Developer Intern
-                      </h4>
-                      <p className="text-xs font-semibold text-blue-600">
-                        Akij Venture Group | Dhaka, Bangladesh
-                      </p>
-                    </div>
-                    <span className="text-xs font-medium text-gray-700">
-                      January 2023 – May 2023
-                    </span>
-                  </div>
-                  <ul className="mt-1 list-disc space-y-1 pl-5 text-xs leading-tight text-gray-700">
-                    <li>
-                      <strong>Developed responsive UI components</strong> using
-                      React.js, JavaScript, and CSS, ensuring cross-browser
-                      compatibility and mobile responsiveness
-                    </li>
-                    <li>
-                      <strong>Optimized API integration</strong>, improving
-                      response times by <strong>30%</strong> through efficient
-                      state management
-                    </li>
-                    <li>
-                      <strong>Collaborated with senior developers</strong> to
-                      implement pixel-perfect designs and participated in Agile
-                      ceremonies
-                    </li>
-                  </ul>
-                </div>
+  <div className="flex items-start justify-between">
+    <div>
+      <h4 className="text-sm font-bold text-gray-900">
+        Frontend Developer Intern
+      </h4>
+      <p className="text-xs font-semibold text-blue-600">
+        Akij Venture Group | Dhaka, Bangladesh
+      </p>
+    </div>
+    <span className="text-xs font-medium text-gray-700">
+      January 2023 – May 2023
+    </span>
+  </div>
+  <ul className="mt-1 list-disc space-y-1 pl-5 text-xs leading-tight text-gray-700">
+    <li>
+      <strong>Developed responsive UI components</strong> using React.js,
+      JavaScript, and CSS, ensuring cross-browser compatibility and mobile
+      responsiveness
+    </li>
+    <li>
+      <strong>Optimized API integration</strong>, improving response times by{" "}
+      <strong>30%</strong> through efficient state management
+    </li>
+    <li>
+      <strong>Collaborated with senior developers</strong> to implement
+      pixel-perfect designs and participated in Agile ceremonies
+    </li>
+    <li>
+      <strong>Enhanced code maintainability</strong> by refactoring legacy
+      components and applying reusable, modular architecture using TypeScript
+    </li>
+    <li>
+      <strong>Integrated third-party libraries and APIs</strong> such as Axios and Chart.js to deliver dynamic data visualization and improve user interactivity
+    </li>
+  </ul>
+</div>
+
+
               </div>
             </div>
 

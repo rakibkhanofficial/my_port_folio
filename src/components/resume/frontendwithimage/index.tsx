@@ -25,9 +25,15 @@ const FrontendDeveloperWithImageResume: React.FC = () => {
       <style>{`
                     @media print {
                       @page {
-                        margin: 0.5in;
+                        margin: 0.3in;
                         size: letter;
                       }
+
+          html, body {
+            margin: 0 !important;
+            padding: 0 !important;
+          }
+          
                       
                       body {
                         -webkit-print-color-adjust: exact;
@@ -305,6 +311,16 @@ const FrontendDeveloperWithImageResume: React.FC = () => {
                       <strong>Collaborated with senior developers</strong> to
                       implement pixel-perfect designs and participated in Agile
                       ceremonies
+                    </li>
+                    <li>
+                      <strong>Enhanced code maintainability</strong> by
+                      refactoring legacy components and applying reusable,
+                      modular architecture using TypeScript
+                    </li>
+                    <li>
+                      <strong>Integrated third-party libraries and APIs</strong>{" "}
+                      such as Axios and Chart.js to deliver dynamic data
+                      visualization and improve user interactivity
                     </li>
                   </ul>
                 </div>
