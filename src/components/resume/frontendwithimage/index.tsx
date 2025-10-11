@@ -111,7 +111,7 @@ const FrontendDeveloperWithImageResume: React.FC = () => {
                 <div className="flex-shrink-0">
                   <div className="h-28 w-28 overflow-hidden">
                     <img
-                      src="/myimage.jpg"
+                      src="/Rakib-mirror.jpg"
                       alt="Rakib Khan"
                       className="h-full w-full object-contain"
                     />
